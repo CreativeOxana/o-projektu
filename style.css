@@ -1,0 +1,107 @@
+/* Používáme intuitivní výpočet rozměrů prvků. */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #b396b4;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-family: monospace;
+  background-color: #b396b4;
+  background-image: url(src/heart_baby_feet.jpg);
+  background-position: 60% 40%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 600;
+}
+
+ul li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #b396b4;
+  font-size: 22px;
+  display: block;
+  padding: 10px 15px;
+  position: relative;
+}
+
+ul li a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #a0a0a0;
+  transform: scaleX(0);
+  transition: all 0.5s;
+  transform-origin: left;
+}
+
+ul li a:hover:before {
+  transform: scaleX(1);
+}
+
+ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #a0a0a0;
+  transform: scaleX(0);
+  transition: all 0.5s;
+  transform-origin: right;
+}
+
+ul li a:hover:after {
+  transform: scaleX(1);
+}
+
+.img {
+  border-radius: 70%;
+}
+
+p {
+  color: #3b3f36;
+  font-size: large;
+}
+
+p a {
+  text-decoration-line: none;
+  text-decoration-color: #b396b4;
+  text-shadow: 1px 1px 1px #b396b4;
+}
+
+a:hover {
+  transform: scale(1.1);
+}
+
+button a {
+  text-decoration-line: none;
+  color: #b396b4;
+  font-weight: bold;
+}
